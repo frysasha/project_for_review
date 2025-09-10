@@ -4,7 +4,7 @@ from playwright.sync_api import BrowserContext, Page, Browser, Playwright
 
 @pytest.fixture(scope="session")
 def get_browser(request: pytest.FixtureRequest, playwright: Playwright) -> Browser:
-    browser = playwright.chromium.launch(channel="chrome", headless=False, args=["--start-maximized"])
+    browser = playwright.chromium.launch(channel="chrome", args=["--start-maximized"])
     return browser
 
 
